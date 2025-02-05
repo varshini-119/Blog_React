@@ -45,21 +45,21 @@ const Home = () => {
 
   const deleteBlog = (index) => {
     const updatedBlogs = [...blogs];
-    updatedBlogs.splice(index, 1); // Remove the blog
+    updatedBlogs.splice(index, 1); 
     setBlogs(updatedBlogs);
     localStorage.setItem('blogs', JSON.stringify(updatedBlogs));
   };
 
   const incrementLikes = (index) => {
     const updatedBlogs = [...blogs];
-    updatedBlogs[index].likes += 1; // Increment the likes
+    updatedBlogs[index].likes += 1; 
     setBlogs(updatedBlogs);
     localStorage.setItem('blogs', JSON.stringify(updatedBlogs));
   };
 
   const incrementViews = (index) => {
     const updatedBlogs = [...blogs];
-    updatedBlogs[index].views += 1; // Increment the views
+    updatedBlogs[index].views += 1; 
     setBlogs(updatedBlogs);
     localStorage.setItem('blogs', JSON.stringify(updatedBlogs));
   };
@@ -90,7 +90,7 @@ const Home = () => {
                     <div className="flex space-x-2">
                       <Link 
                         to={`/blog/${index + 1}`} 
-                        target="_blank" 
+{/*                         target="_blank"  */}
                         className="text-blue-500"
                         onClick={() => incrementViews(index - staticBlogs.length)} // Increment view when clicked
                       >
