@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import CategoryPage from "./pages/CategoryPage";
-
 import BlogDetail from './components/BlogDetail'; 
 import AddBlog from "./pages/AddBlog";
 import ReadMore from "./components/ReadMore";
