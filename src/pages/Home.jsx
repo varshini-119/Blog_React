@@ -90,7 +90,6 @@ const Home = () => {
                     <div className="flex space-x-2">
                       <Link 
                         to={`/blog/${index + 1}`} 
-{/*                         target="_blank"  */}
                         className="text-blue-500"
                         onClick={() => incrementViews(index - staticBlogs.length)} // Increment view when clicked
                       >
