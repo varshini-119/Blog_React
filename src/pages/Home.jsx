@@ -45,21 +45,21 @@ const Home = () => {
 
   const deleteBlog = (index) => {
     const updatedBlogs = [...blogs];
-    updatedBlogs.splice(index, 1); 
+    updatedBlogs.splice(index, 1); // Remove the blog
     setBlogs(updatedBlogs);
     localStorage.setItem('blogs', JSON.stringify(updatedBlogs));
   };
 
   const incrementLikes = (index) => {
     const updatedBlogs = [...blogs];
-    updatedBlogs[index].likes += 1; 
+    updatedBlogs[index].likes += 1; // Increment the likes
     setBlogs(updatedBlogs);
     localStorage.setItem('blogs', JSON.stringify(updatedBlogs));
   };
 
   const incrementViews = (index) => {
     const updatedBlogs = [...blogs];
-    updatedBlogs[index].views += 1; 
+    updatedBlogs[index].views += 1; // Increment the views
     setBlogs(updatedBlogs);
     localStorage.setItem('blogs', JSON.stringify(updatedBlogs));
   };
