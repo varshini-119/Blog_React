@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const ReadMore = () => {
-  const { index } = useParams(); // To get the index from the URL
+  const { index } = useParams(); 
   const navigate = useNavigate();
   
   const [blog, setBlog] = useState(null);
@@ -12,12 +12,9 @@ const ReadMore = () => {
     const allBlogs = JSON.parse(localStorage.getItem('blogs')) || [];
     const blogData = allBlogs[parseInt(index, 10)];
 
-    // If blog is found, increment views
     if (blogData) {
       blogData.views += 1;
       setBlog(blogData);
-
-      // Save the updated view count back to localStorage
       allBlogs[parseInt(index, 10)] = blogData;
       localStorage.setItem('blogs', JSON.stringify(allBlogs));
     }
@@ -28,8 +25,7 @@ const ReadMore = () => {
       const updatedBlog = { ...blog, likes: blog.likes + 1 };
       setBlog(updatedBlog);
       setIsLiked(true);
-
-      // Update the likes in localStorage
+      
       const allBlogs = JSON.parse(localStorage.getItem('blogs')) || [];
       allBlogs[parseInt(index, 10)] = updatedBlog;
       localStorage.setItem('blogs', JSON.stringify(allBlogs));
